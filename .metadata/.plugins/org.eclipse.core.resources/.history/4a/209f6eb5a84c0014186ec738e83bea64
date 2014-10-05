@@ -14,19 +14,16 @@ class TCPClient
 	private static boolean hasStream, bufferOverload;
 	private static ArrayList<Integer> dataBuffer;
 	private static Algorithm algorithm;
-	final static int maxDataBuffer = 2000;
+	final int maxDataBuffer = 2000;
 	
 	public static void main(String argv[]) throws Exception
  	{
-		hasStream = true;
+		hasStream = false;
 		bufferOverload = false;
 		init();
 		while(true){
 			clientStatus.write(createNewStatusPacket(false));
 			if(dataIn.readLine() != null) dataBuffer.add(Integer.parseInt(dataIn.readLine()));
-			if(dataBuffer.size() > maxDataBuffer) bufferOverload = true;
-			
-			//Algorithm interface
 			if(algorithm.canAcceptData() && dataBuffer.size()>0){
 				algorithm.acceptData(dataBuffer.get(0));
 				dataBuffer.remove(0);

@@ -8,7 +8,6 @@ class TCPServer
 {
    public static void main(String argv[]) throws Exception
       {
-	   init();
 	   //initiate gui
 	   BasicFrame centralGUI = new BasicFrame();
 	   centralGUI.setTitle("Server");

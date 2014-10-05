@@ -8,7 +8,6 @@ class TCPServer
 {
    public static void main(String argv[]) throws Exception
       {
-	   init();
 	   //initiate gui
 	   BasicFrame centralGUI = new BasicFrame();
 	   centralGUI.setTitle("Server");
@@ -36,11 +35,7 @@ class TCPServer
       }
    
    private static void init(){
-	   try {
-		ServerSocket welcomeSocket = new ServerSocket(9912);
-	} catch (IOException e) {
-		e.printStackTrace();
-	}
+	   ServerSocket welcomeSocket = new ServerSocket(9912);
    }
    
 }
