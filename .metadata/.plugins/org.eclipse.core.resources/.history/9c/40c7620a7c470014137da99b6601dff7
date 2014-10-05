@@ -1,0 +1,56 @@
+import java.io.*;
+import java.net.*;
+
+import javax.swing.JFrame;
+
+class TCPClient
+{
+	private static Socket clientSocket;
+	private static Socket dataSocket;
+	private static DataOutputStream clientStatus, result;
+	private static boolean hasStream, bufferOverload;
+	
+	public static void main(String argv[]) throws Exception
+ 	{
+		hasStream = false;
+		buffOverload = false;
+		init();
+		while(true){
+			
+		}
+	 // outToServer.writeBytes(sentence + '\n');
+	 // modifiedSentence = inFromServer.readLine();
+	  //System.out.println("FROM SERVER: " + modifiedSentence);
+	  //centralGUI.outputLabel.setText("FROM SERVER: " + modifiedSentence);
+	  //clientSocket.close();
+ 	}
+	
+	private static void init() throws UnknownHostException, IOException{
+		clientSocket = new Socket("localhost", 9912);
+		dataSocket = new Socket("localhost", 9913);
+		clientStatus = new DataOutputStream(clientSocket.getOutputStream());
+		result = new DataOutputStream(dataSocket.getOutputStream());
+		
+		//start the GUI
+		BasicFrame centralGUI = new BasicFrame();
+		centralGUI.setTitle("Client");
+		centralGUI.setSize(300,300);
+		centralGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		centralGUI.setVisible(true);
+	}
+	
+	private static byte[] createNewStatusPacket(){
+		byte[] payload = new byte[2];
+		//0-0-0 is idle
+		//0-0-1 is data stream go
+		//0-1-0 is data stream wait
+		//0-1-1 is data stream end
+		if(!hasStream){
+			payload[0] = 0;
+			payload[1] = 0;
+		} else{
+			
+		}
+		return payload;
+	}
+}

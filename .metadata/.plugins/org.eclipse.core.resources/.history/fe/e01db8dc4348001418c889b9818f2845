@@ -1,0 +1,37 @@
+package com.bitsolve.server;
+import java.io.*;
+import java.net.*;
+
+import javax.swing.JFrame;
+
+class TCPServer
+{
+   public static void main(String argv[]) throws Exception
+      {
+	   //initiate gui
+	   BasicFrame centralGUI = new BasicFrame();
+	   centralGUI.setTitle("Server");
+	   centralGUI.setSize(300,300);
+	   centralGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	   centralGUI.setVisible(true);
+	   
+       String clientSentence;
+       String capitalizedSentence;
+       ServerSocket welcomeSocket = new ServerSocket(9912);
+
+       while(true)
+       {
+        
+          Socket connectionSocket = welcomeSocket.accept();
+          BufferedReader inFromClient =
+        		  new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
+          DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
+          clientSentence = inFromClient.readLine();
+          System.out.println("Received: " + clientSentence);
+          centralGUI.outputLabel.setText("Received: " + clientSentence);
+          capitalizedSentence = clientSentence.toUpperCase() + '\n';
+          outToClient.writeBytes(capitalizedSentence);
+          System.out.println("Running");
+         }
+      }
+}

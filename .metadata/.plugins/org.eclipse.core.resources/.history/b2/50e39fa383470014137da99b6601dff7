@@ -1,0 +1,20 @@
+package com.bitsolve.client;
+
+public class Algorithm extends Thread{
+	private int bufferedData;
+	
+	public void run(){
+		bufferedData = 0;
+	}
+	
+	public boolean canAcceptData(){
+		if(bufferedData == 0x0000) return false;
+		else return true;
+	}
+	
+	public void acceptData(int data){
+		if()
+		this.bufferedData = data;
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SpaceGame3/res/sound/Who Wants to be a Millionaire Full Theme Song.mp3&apos; to &apos;millionaire.mp3&apos;" description="Rename resource &apos;Who Wants to be a Millionaire Full Theme Song.mp3&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/sound/Who Wants to be a Millionaire Full Theme Song.mp3" name="millionaire.mp3" stamp="1403404057792" updateReferences="true"/>
+</session>

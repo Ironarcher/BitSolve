@@ -1,0 +1,45 @@
+import java.io.*;
+import java.net.*;
+
+import javax.swing.JFrame;
+
+class TCPClient
+{
+	private static Socket clientSocket;
+	private static Socket dataSocket;
+	
+	public static void main(String argv[]) throws Exception
+ 	{
+		 //initiate gui
+		BasicFrame centralGUI = new BasicFrame();
+		   centralGUI.setTitle("Client");
+		   centralGUI.setSize(300,300);
+		   centralGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		   centralGUI.setVisible(true);
+
+	  String sentence;
+	  String modifiedSentence;
+	  BufferedReader inFromUser = new BufferedReader( new InputStreamReader(System.in));
+	  Socket clientSocket = new Socket("localhost", 9912);
+	  DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+	  BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+	  sentence = "WAZ UP";
+	  outToServer.writeBytes(sentence + '\n');
+	  modifiedSentence = inFromServer.readLine();
+	  System.out.println("FROM SERVER: " + modifiedSentence);
+	  centralGUI.outputLabel.setText("FROM SERVER: " + modifiedSentence);
+	  clientSocket.close();
+ 	}
+	
+	private static void init() throws UnknownHostException, IOException{
+		clientSocket = new Socket("localhost", 9912);
+		dataSocket = new Socket("localhost", 9913);
+		
+		//start the GUI
+		BasicFrame centralGUI = new BasicFrame();
+		centralGUI.setTitle("Client");
+		centralGUI.setSize(300,300);
+		centralGUI.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		centralGUI.setVisible(true);
+	}
+}

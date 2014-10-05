@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;Hotbar.java&apos; to &apos;SpaceGame3/src/nitrogene.gui&apos;&#x0D;&#x0A;- Original project: &apos;SpaceGame3&apos;&#x0D;&#x0A;- Destination element: &apos;SpaceGame3/src/nitrogene.gui&apos;&#x0D;&#x0A;- Original element: &apos;nitrogene.core.Hotbar.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;nitrogene.gui" element1="/src&lt;nitrogene.core{Hotbar.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1398111218757" units="1" version="1.0"/>
+</session>

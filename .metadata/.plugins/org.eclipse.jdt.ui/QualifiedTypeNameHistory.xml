@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="nitrogene.objecttree.ImageObject"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
+<fullyQualifiedTypeName name="nitrogene.world.DroppedItem"/>
+<fullyQualifiedTypeName name="nitrogene.core.Craft"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.tests.xml.Item"/>
+<fullyQualifiedTypeName name="nitrogene.world.EnumDrop"/>
+<fullyQualifiedTypeName name="nitrogene.objecttree.RectangleObject"/>
+<fullyQualifiedTypeName name="nitrogene.world.Item"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.geom.Polygon"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.geom.Shape"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.geom.Circle"/>
+<fullyQualifiedTypeName name="nitrogene.objecttree.PhysicalObject"/>
+<fullyQualifiedTypeName name="nitrogene.util.Button"/>
+<fullyQualifiedTypeName name="nitrogene.util.AppData"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Music"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Sound"/>
+<fullyQualifiedTypeName name="nitrogene.core.GlobalInformation"/>
+<fullyQualifiedTypeName name="nitrogene.core.AssetManager"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.bitsolve.client.Algorithm"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,19 @@
+package com.bitsolve.client;
+
+public class Algorithm extends Thread{
+	private int bufferedData;
+	
+	public void run(){
+		bufferedData = 0;
+	}
+	
+	public boolean canAcceptData(){
+		return bufferedData.isNull();
+	}
+	
+	public void acceptData(int data){
+		if()
+		this.bufferedData = data;
+	}
+
+}

@@ -1,0 +1,5 @@
+commit_dialog_history_messages=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<messages>\r\n<message>Fixed several bugs</message>\r\n<message>Added music to main menu\!</message>\r\n<message>Fixed other options bugs</message>\r\n<message>Fixed tabs in ShipState</message>\r\n<message>Added master warning resources</message>\r\n<message>Almost finished hitbox syste,</message>\r\n<message>CRITICAL\: Circle, Rectangle, Image, and Ellipse Objects NOW DEPRECATED</message>\r\n<message>Added framework to DroppedItems and added Storage class</message>\r\n<message>Made rotation based on Delta (even rotation even on slow FPS)</message>\r\n<message>Added alarm sound files for SFX use.</message>\r\n</messages>
+eclipse.preferences.version=1
+resourcehistory_graph_split=500,500
+resourcehistory_rev_split=700,300
+sync_view_last_selected_model=org.eclipse.jdt.ui.modelProvider

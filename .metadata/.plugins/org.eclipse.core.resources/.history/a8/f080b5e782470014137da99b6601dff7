@@ -1,0 +1,9 @@
+package com.bitsolve.server;
+
+public class Algorithm extends Thread{
+	
+	public void run(){
+		
+	}
+
+}

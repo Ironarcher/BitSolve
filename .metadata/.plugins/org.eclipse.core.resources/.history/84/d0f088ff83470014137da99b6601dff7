@@ -1,0 +1,27 @@
+package com.bitsolve.client;
+
+import java.util.ArrayList;
+
+public class Algorithm extends Thread{
+	private int bufferedData;
+	private boolean acceptableData;
+	private ArrayList<Integer> releaseData;
+	
+	public void run(){
+		bufferedData = 0;
+		acceptableData = true;
+		releaseData = new ArrayList<Integer>();
+	}
+	
+	public boolean canAcceptData(){
+		return acceptableData;
+	}
+	
+	public void acceptData(int data){
+		if(acceptableData){
+			this.bufferedData = data;
+			acceptableData = false;
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+
+
+public class Algorithm extends Thread{
+	
+	public void run(){
+		
+	}
+
+}
